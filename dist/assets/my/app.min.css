@@ -1,13 +1,1 @@
-@import url(../fonts/playfairdisplay/font.css);
-/*
-@import "../fonts/opensans/font.css";
-*/
-body {
-  font-family: 'Playfair Display';
-  font-weight: normal; }
-
-@media (min-width: 992px) {
-  .mfp-arrow-left {
-    left: -70px; }
-  .mfp-arrow-right {
-    right: -70px; } }
+@import url(../fonts/playfairdisplay/font.css);body{font-family:'Playfair Display';font-weight:400}@media (min-width:992px){.mfp-arrow-left{left:-70px}.mfp-arrow-right{right:-70px}}

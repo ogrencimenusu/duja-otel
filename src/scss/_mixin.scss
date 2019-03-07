@@ -1,0 +1,23 @@
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+  transform: $property;
+}
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+@mixin shadow($property){
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  -ms-box-shadow: $property;
+  -o-box-shadow: $property;
+  box-shadow: $property;
+}
+$color-1 : #28868f;
+$color-2 :#005a67;
