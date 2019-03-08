@@ -12,12 +12,28 @@
   -o-transition: $property;
   transition: $property;
 }
-@mixin shadow($property){
+@mixin box-shadow($property){
   -webkit-box-shadow: $property;
   -moz-box-shadow: $property;
   -ms-box-shadow: $property;
   -o-box-shadow: $property;
   box-shadow: $property;
 }
+@mixin text-shadow($property){
+  -webkit-text-shadow: $property;
+  -moz-text-shadow: $property;
+  -ms-text-shadow: $property;
+  -o-text-shadow: $property;
+  text-shadow: $property;
+}
+@mixin border-radius($property){
+  -webkit-border-radius: $property;
+  -moz-border-radius: $property;
+  -ms-border-radius: $property;
+  -o-border-radius: $property;
+  border-radius: $property;
+}
 $color-1 : #28868f;
 $color-2 :#005a67;
+$color-white :#ffffff;
+$color-light-black :#333333;
