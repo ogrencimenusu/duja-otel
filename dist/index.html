@@ -29,9 +29,8 @@
     <link rel="stylesheet" href="assets/my/app.min.css">
 </head>
 <body>
-    <section id="header">
+    <section class="d-none" id="header">
         <div class="container">
-
             <div class="row">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <div class="col">
@@ -80,7 +79,42 @@
             </div>
         </div>
     </section>
+    <section id="main-bodrum">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 m-auto">
 
+                    <ul class="items">
+                        <li>
+                            <div class="bg-img" style="background-image: url('assets/images/doga-deniz.jpg');"></div>
+                            <a href="#">
+                                <div class="content">
+                                    <h2>Orange is the new black</h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="bg-img" style="background-image: url('assets/images/yiyecek-icecek.jpg');"></div>
+                            <a href="#">
+                                <div class="content">
+                                    <h2>Orange is the new black</h2>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="bg-img" style="background-image: url('assets/images/eglence-personel.jpg');"></div>
+                            <a href="#">
+                                <div class="content">
+                                    <h2>Orange is the new black</h2>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Optional JavaScript -->
     <script src="assets/jquery-3.3.1/jquery.min.js"></script>
 
@@ -96,5 +130,11 @@
 
     <!-- Main JS -->
     <script src="assets/my/main.js"></script>
+
+    <script>
+        $(document).ready(() => {
+
+        })
+    </script>
 </body>
 </html>
