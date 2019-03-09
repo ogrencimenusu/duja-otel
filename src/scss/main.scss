@@ -4,9 +4,6 @@
 /*
 @import "../fonts/opensans/font.css";
 */
-section {
-
-}
 
 body {
   font-family: 'Playfair Display';
@@ -35,6 +32,7 @@ body {
 ul.flixhover {
   display: flex;
   margin-top: 30px;
+  padding: 0;
   li {
     position: relative;
     list-style-type: none;
@@ -53,6 +51,7 @@ ul.flixhover {
     }
     &:nth-child(3) {
       margin-top: -15px;
+      margin-right: 0;
     }
     a {
       display: block;
@@ -189,7 +188,6 @@ ul.flixhover {
     }
   }
 }
-
 /* === Header SON=== */
 
 /* === Slider === */
@@ -204,6 +202,7 @@ ul.flixhover {
       height: 100vh;
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: top center;
       .caption {
         color: $color-white;
         @include text-shadow(3px 1px 10px $color-2);
@@ -293,7 +292,6 @@ ul.flixhover {
           }
           .form-control{
             padding-right: 35px;
-            padding-bottom: 12px;
           }
         }
         .btn{
@@ -303,6 +301,8 @@ ul.flixhover {
         }
         .form-control{
           color: $color-1;
+          padding-bottom: 12px;
+
         }
         label{
           margin-bottom: 0;
@@ -313,7 +313,6 @@ ul.flixhover {
     }
   }
 }
-
 /* === Slider SON === */
 
 /* === Duja Bodrum === */
@@ -321,7 +320,6 @@ ul.flixhover {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-
 /* === Duja Bodrum SON === */
 
 /* === Otel Hakkında === */
@@ -386,7 +384,6 @@ ul.flixhover {
 
   }
 }
-
 /* === Otel Hakkında Son === */
 
 /* === Mini Slider === */
@@ -432,7 +429,7 @@ ul.flixhover {
       }
       button {
         position: absolute;
-        top: 40%;
+        top: 38%;
         z-index: 1;
         width: 50px;
         height: 50px;
@@ -464,11 +461,10 @@ ul.flixhover {
     }
   }
 }
-
 /* === Mini Slider Son === */
 
 /* === Restaurant === */
-#main-restautant {
+#main-restaurant {
   padding: 10px 0px;
   position: relative;
 
@@ -527,7 +523,6 @@ ul.flixhover {
     }
   }
 }
-
 /* === Restaurant Son === */
 
 /* === Oda Çeşitleri === */
@@ -535,9 +530,9 @@ ul.flixhover {
   padding-top: 30px;
   padding-bottom: 80px;
 }
-
 /* === Oda Çeşitleri SON === */
 
+/* === Logolar  === */
 #main-logolar {
   padding-bottom: 30px;
   .logo-wrapper {
@@ -551,18 +546,272 @@ ul.flixhover {
     }
   }
 }
+/* === Logolar  SON === */
 
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
-  .mfp-arrow-left {
-    left: -70px;
+@media (max-width:767px) {
+  #header{
+    position: relative;
+    background: linear-gradient(to bottom,rgba(255,255,255,1) 100%,rgba(255,255,255,0) 100%);
+    padding-top: 0;
+    padding-bottom: 0;
+    .navbar-brand{
+      width: 100%;
+      margin-right: 0;
+      img{
+        margin: auto;
+        display: block;
+        width: 150px;
+        margin-bottom: 10px ;
+      }
+    }
+    .dil-wrapper{
+      padding-left: 0;
+      margin: auto;
+      text-align: center;
+    }
+    .tr-wrapper{
+      .sosyal{
+        margin-left: 0;
+      }
+    }
+    .navbar{
+      padding-left: 0;
+      .navbar-toggler{
+        outline: 0;
+        margin-top: -200px;
+        @include transform(scale(.7))
+      }
+      .navbar-collapse{
+        .navbar-nav{
+          .nav-item{
+            float: left;
+            .nav-link{
+              border-right: 0;
+              padding: 0 8px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
   }
-  .mfp-arrow-right {
-    right: -70px;
+  #slider{
+    @include box-shadow(0px 11px 71px -8px $color-2);
+    .owl-carousel {
+      .item {
+        .row{
+          align-items: normal !important;
+        }
+        .caption {
+          width: 100%;
+          padding: 30px;
+          padding-top: 50px;
+          color: $color-white;
+          @include text-shadow(3px 1px 10px $color-2);
+          h1 {
+            font-size: 40px;
+          }
+          h3 {
+            font-size: 30px;
+          }
+        }
+      }
+      img {
+        height: 100vh;
+        width: auto;
+      }
+    }
+    .dots-wrap{
+      top: 20%;
+    }
+    .rezervasyon{
+      .rez-wrapper{
+        .form-group{
+          margin-bottom: 15px;
+          label{
+            width: 72px;
+          }
+          &.kisi-sayisi{
+            margin-right: 10px;
+            i{
+              margin-left: -24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #main-restaurant{
+    .main-title {
+      margin-bottom: -30px;
+      margin-top: 20px;
+    }
+  }
+  #main-otel-hakkinda{
+    .hakkimizda-wrapper{
+      .bg-white{
+        margin: 0;
+        .yazi-wrapper{
+          padding: 40px 20px;
+          .logo{
+            margin: auto;
+          }
+        }
+        .img-wrapper{
+          padding: 0;
+          img{
+            margin: 0px;
+            @include transform(scale(1))
+          }
+        }
+      }
+      .buton{
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+  .mini-slider{
+    padding: 0;
+    overflow: hidden;
+    &:before {
+      height: 30px;
+      top: calc(50% - 15px);
+    }
+    .item{
+      @include transform(scale(.8) !important)
+    }
+    .owl-nav{
+      button{
+        top: 42% !important;
+        width: 20px !important;
+        &.owl-prev{
+          left: -8px !important;
+        }
+        &.owl-next{
+          right: -8px !important;
+        }
+      }
+    }
+  }
+  .flixhover{
+    &:hover {
+      li{
+        .caption{
+          span:nth-child(1) {
+            font-size: 30px;
+            margin-bottom: -10px;
+          }
+          span:nth-child(2) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:991px) and (min-width:768px) {
+  #header{
+    background: linear-gradient(to bottom,rgba($color-white,.94) 70%,rgba($color-white,0) 98%);
+    padding-top: 0;
+    .navbar-brand{
+      width: 100%;
+      margin-right: 0;
+      img{
+        margin: auto;
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+    .navbar{
+      padding-left: 0;
+      .navbar-toggler{
+        outline: 0;
+        margin-top: -230px;
+      }
+      .navbar-collapse{
+        .navbar-nav{
+          flex-direction: row;
+          .nav-item{
+            float: left;
+            .nav-link{
+              border-right: 0;
+              padding: 0 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #slider{
+    .rezervasyon{
+      .rez-wrapper{
+        .form-group{
+          margin-bottom: 30px;
+          label{
+            width: 72px;
+          }
+          &.kisi-sayisi{
+            i{
+              margin-right: 10px;
+              margin-left: -40px;
+            }
+            .form-control{
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #main-otel-hakkinda{
+    overflow: hidden;
+  }
+  ul.flixhover {
+    li {
+      width: 400px;
+        &:hover{
+          width: 600px;
+        }
+    }
+  }
+  .mini-slider{
+    &:before{
+      height: 40px;
+      top: calc(50% - 20px);
+    }
+    .owl-nav{
+      button{
+        top: 42% !important;
+        background-size: 20% !important;
+      }
+    }
+  }
+}
+@media (max-width:1200px) and (min-width:992px) {
+
+  #header{
+    .dil-wrapper {
+      padding-left: 93px;
+    }
+    .navbar-brand{
+      width: 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+    .sosyal {
+      padding-right: 37px !important;
+    }
+  }
+  .mini-slider{
+    &:before {
+    height: 50px;
+    top: calc(50% - 20px);
+    }
+    button {
+      top: 44% !important;
+      height: 50px;
+      background-size: 20% !important;
+    }
   }
 }
