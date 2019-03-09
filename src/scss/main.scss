@@ -4,26 +4,27 @@
 /*
 @import "../fonts/opensans/font.css";
 */
-section{
+section {
 
 }
-body{
+
+body {
   font-family: 'Playfair Display';
   font-weight: normal;
 }
 
 /* Genel Class */
-.main-title{
+.main-title {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom:50px ;
+  margin-bottom: 50px;
   img {
     margin-right: 10px;
     width: 50px;
   }
-  h3{
+  h3 {
     color: $color-2;
     font-size: 40px;
     margin-bottom: 0;
@@ -31,10 +32,10 @@ body{
 }
 
 /* Flix Hover */
-ul.flixhover{
+ul.flixhover {
   display: flex;
   margin-top: 30px;
-  li{
+  li {
     position: relative;
     list-style-type: none;
     width: 300px;
@@ -44,49 +45,49 @@ ul.flixhover{
     margin-right: 15px;
     @include border-radius(4px);
     @include box-shadow(0px 5px 24px -9px $color-light-black);
-    &:nth-child(1){
+    &:nth-child(1) {
       margin-top: 0px;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       margin-top: -30px;
     }
-    &:nth-child(3){
+    &:nth-child(3) {
       margin-top: -15px;
     }
-    a{
+    a {
       display: block;
-      .bg-img{
+      .bg-img {
         position: absolute;
         width: 100%;
         height: 100%;
         background-size: cover;
         background-position: center top;
       }
-      .caption{
+      .caption {
         position: absolute;
         bottom: 0;
         width: 100%;
         padding-right: 20px;
         padding-bottom: 30px;
         padding-top: 100px;
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba($color-2,1) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba($color-2, 1) 100%);
         letter-spacing: -1.8px;
-        span{
+        span {
           color: #fff;
           display: block;
           text-align: right;
           margin-bottom: -20px;
-          &:nth-child(1){
+          &:nth-child(1) {
             font-size: 40px;
             margin-right: 5px;
           }
-          &:nth-child(2){
+          &:nth-child(2) {
             font-size: 25px;
           }
         }
       }
     }
-    &:hover{
+    &:hover {
       transition-delay: .1s;
       width: 450px;
     }
@@ -94,59 +95,59 @@ ul.flixhover{
 }
 
 /* === Header === */
-#header{
-  position:absolute;
+#header {
+  position: absolute;
   z-index: 2;
   width: 100%;
-  background: linear-gradient(to bottom,rgba(255, 255, 255, 0.94) 40%,rgba(255, 255, 255, 0) 98%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.94) 40%, rgba(255, 255, 255, 0) 98%);
   padding-bottom: 60px;
   padding-top: 30px;
 
   /* Header Ust Kısım */
-  .tr-wrapper{
+  .tr-wrapper {
     display: flex;
-    .sosyal{
+    .sosyal {
       border-right: 1px solid $color-2;
       padding-right: 30px;
       margin-right: 30px;
       margin-left: 110px;
-      a{
+      a {
         color: $color-2;
         font-size: 20px;
         margin-left: 30px;
         display: block;
         float: left;
-        &:hover{
+        &:hover {
           text-decoration: none;
           opacity: .7;
         }
       }
     }
-    .telefon{
-      a{
+    .telefon {
+      a {
         color: $color-2;
         font-size: 22px;
         display: block;
         float: left;
-        &:hover{
+        &:hover {
           text-decoration: none;
           opacity: .7;
         }
       }
     }
   }
-  .dil-wrapper{
+  .dil-wrapper {
     padding-left: 77px;
-    a{
+    a {
       font-size: 20px;
       text-align: center;
       padding: 2px 10px;
       color: $color-2;
       border-right: 1px solid $color-1;
-      &:nth-last-child(1){
+      &:nth-last-child(1) {
         border-right: 0;
       }
-      &:hover{
+      &:hover {
         text-decoration: none;
         opacity: .7;
       }
@@ -154,32 +155,32 @@ ul.flixhover{
   }
 
   /* Header Sol Kısım */
-  .navbar-brand{
+  .navbar-brand {
     margin-top: 20px;
-    img{
+    img {
       width: 180px;
     }
   }
 
   /* Header Alt Kısım */
-  .navbar{
+  .navbar {
     margin-top: 15px;
-    ul.navbar-nav{
+    ul.navbar-nav {
       margin-left: auto;
-      li.nav-item{
-        a{
+      li.nav-item {
+        a {
           font-size: 15px;
           text-align: center;
           padding: 0px 20px;
           color: $color-1;
           border-right: 1px solid $color-1;
-          &:hover{
+          &:hover {
             opacity: .7;
           }
 
         }
-        &:nth-last-child(1){
-          a{
+        &:nth-last-child(1) {
+          a {
             border-right: 0;
           }
         }
@@ -188,52 +189,53 @@ ul.flixhover{
     }
   }
 }
+
 /* === Header SON=== */
 
 /* === Slider === */
-#slider{
+#slider {
   @include box-shadow(0px 11px 71px -8px $color-2);
   position: relative;
   z-index: 1;
   height: 100vh;
-  .owl-carousel{
-    .item{
+  .owl-carousel {
+    .item {
       width: 100%;
       height: 100vh;
-      background-repeat: no-repeat ;
+      background-repeat: no-repeat;
       background-size: cover;
-      .caption{
+      .caption {
         color: $color-white;
         @include text-shadow(3px 1px 10px $color-2);
-        h1{
+        h1 {
           font-size: 100px;
         }
-        h3{
+        h3 {
           font-size: 50px;
         }
       }
     }
-    img{
+    img {
       height: 100vh;
       width: auto;
     }
   }
 
   /* Slider Dots */
-  .dots-wrap{
+  .dots-wrap {
     position: absolute;
     width: 100%;
     align-items: center;
     z-index: 1;
     top: 50%;
-    .container{
+    .container {
       position: relative;
-      .owl-dots{
+      .owl-dots {
         width: 10px;
         margin-left: auto;
         position: absolute;
         right: 20px;
-        .owl-dot{
+        .owl-dot {
           background: $color-white;
           @include border-radius(100px);
           @include box-shadow(1px 3px 11px -2px $color-light-black);
@@ -244,92 +246,139 @@ ul.flixhover{
           text-align: center;
           margin-bottom: 20px;
           outline: 0;
-          &.active{
-            background:$color-1 ;
+          &.active {
+            background: $color-1;
             border-color: $color-white;
           }
-          span{
+          span {
             display: none;
           }
         }
       }
     }
   }
-  .rezervasyon{
+  .rezervasyon {
     width: 100%;
     position: absolute;
     bottom: 0px;
     z-index: 1;
-    .wrapper{
-      background: rgba($color-2,.7);
+    .rez-wrapper {
+      background: rgba($color-2, .7);
+      @include border-radius(0px 4px 0px 0px);
+      padding: 20px 15px;
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+      .rez-title{
+        font-size: 17px;
+        position: absolute;
+        top: -40px;
+        left: 0px;
+        padding: 10px 15px;
+        color: $color-white;
+        background: rgba($color-2, .7);
+        @include border-radius(4px 4px 0px 0px)
 
+      }
+      .form-group{
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        i{
+          color: $color-1;
+        }
+        &.kisi-sayisi {
+          i {
+            margin-left: -30px;
+          }
+          .form-control{
+            padding-right: 35px;
+            padding-bottom: 12px;
+          }
+        }
+        .btn{
+          background: $color-white;
+          width: 100%;
+          color: $color-1;
+        }
+        .form-control{
+          color: $color-1;
+        }
+        label{
+          margin-bottom: 0;
+          margin-right: 15px;
+          color: $color-white;
+        }
+      }
     }
   }
 }
+
 /* === Slider SON === */
 
 /* === Duja Bodrum === */
-#main-duja-bodrum{
+#main-duja-bodrum {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+
 /* === Duja Bodrum SON === */
 
 /* === Otel Hakkında === */
-#main-otel-hakkinda{
+#main-otel-hakkinda {
   padding-top: 80px;
   padding-bottom: 80px;
-  background-image: url("../images/bg-otel-hakkinda.png") ;
-  background-position:center ;
+  background-image: url("../images/bg-otel-hakkinda.png");
+  background-position: center;
   background-size: 80%;
   background-repeat: no-repeat;
   background-color: $color-1;
 
-  .hakkimizda-wrapper{
-    .buton{
+  .hakkimizda-wrapper {
+    .buton {
       padding-left: 70px;
-      .btn{
+      .btn {
         padding: 10px 40px;
         margin-top: 30px;
         background: $color-white;
         color: $color-1;
       }
     }
-    .bg-white{
-      @include box-shadow(0px 6px 40px -4px  $color-light-black);
+    .bg-white {
+      @include box-shadow(0px 6px 40px -4px $color-light-black);
       @include border-radius(4px);
-      .yazi-wrapper{
+      .yazi-wrapper {
         padding-top: 80px;
         padding-bottom: 30px;
         padding-left: 70px;
         color: $color-1;
-        h3{
-          color:$color-2;
+        h3 {
+          color: $color-2;
           font-size: 35px;
           margin-top: 30px;
           margin-bottom: 20px;
         }
-        h5{
+        h5 {
           margin-bottom: 15px;
           font-size: 17px;
         }
-        p{
+        p {
           font-size: 13px;
         }
-        .logo{
+        .logo {
           width: 200px;
           margin-left: auto;
           display: block;
         }
       }
-      .img-wrapper{
+      .img-wrapper {
         position: relative;
-        img{
+        img {
           width: 100%;
           margin-top: 120px;
           margin-left: 70px;
           @include transform(scale(1.3));
-          @include box-shadow(0px 6px 40px -4px  $color-light-black);
+          @include box-shadow(0px 6px 40px -4px $color-light-black);
           @include border-radius(4px);
         }
       }
@@ -337,13 +386,14 @@ ul.flixhover{
 
   }
 }
+
 /* === Otel Hakkında Son === */
 
 /* === Mini Slider === */
-.mini-slider{
+.mini-slider {
   padding: 50px 0px;
   position: relative;
-  &:before{
+  &:before {
     height: 100px;
     width: 100%;
     position: absolute;
@@ -352,18 +402,18 @@ ul.flixhover{
     background: $color-1;
   }
 
-  .owl-carousel{
+  .owl-carousel {
     position: relative;
-    .owl-stage-outer{
+    .owl-stage-outer {
       padding: 30px 0px;
-      .item{
+      .item {
         position: relative;
         @include border-radius(4px);
         @include box-shadow(-3px 10px 16px -7px $color-light-black);
         @include transform(scale(.94));
         overflow: hidden;
-        .caption{
-          background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba($color-2,1) 100%);
+        .caption {
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba($color-2, 1) 100%);
           position: absolute;
           width: 100%;
           color: $color-white;
@@ -374,57 +424,72 @@ ul.flixhover{
         }
       }
     }
-    .owl-nav{
+    .owl-nav {
       margin: 0;
       display: block;
-      button{
+      &:hover{
+        background: transparent !important;
+      }
+      button {
         position: absolute;
         top: 40%;
         z-index: 1;
         width: 50px;
         height: 50px;
-        background-position:top center;
+        background-position: top center;
+        background-repeat: no-repeat;
         background-size: 40%;
         color: transparent;
-        background-repeat: no-repeat;
         outline: 0;
-        &:hover{
-          background-color: transparent;
-          opacity: .8;
-        }
-        &.owl-prev{
-          left: -50px;
-          background-image: url('../images/icon-slider-control-left.png') ;
-        }
-        &.owl-next{
-          right: -50px;
-          background-image: url('../images/icon-slider-control-right.png') ;
 
+        &.owl-prev {
+          left: -50px;
+          background-image: url('../images/icon-slider-control-left.png') !important;
+        }
+        &.owl-next {
+          right: -50px;
+          background-image: url('../images/icon-slider-control-right.png') !important;
+
+        }
+        &:hover {
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: 40%;
+          background-color: transparent;
+          background-size: 40%;
+          opacity: .8;
+          color: transparent;
         }
       }
     }
   }
 }
+
 /* === Mini Slider Son === */
 
 /* === Restaurant === */
-#main-restautant{
+#main-restautant {
   padding: 10px 0px;
   position: relative;
 
-  .owl-carousel{
+  .main-title{
+   margin-bottom: 30px;
+  }
+  .owl-carousel {
     position: relative;
-    .owl-stage-outer{
-      padding: 30px 0px;
-      .item{
+    .owl-stage-outer {
+      padding-top: 60px;
+      padding-bottom: 30px;
+      .item {
         position: relative;
         @include border-radius(4px);
         @include box-shadow(0px 0px 30px -10px $color-1);
         @include transform(scale(.92));
+        @include transition(300ms all ease);
         overflow: hidden;
-        .caption{
+        .caption {
           padding-top: 100px;
-          background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,$color-white 60%);
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, $color-white 60%);
           position: absolute;
           width: 100%;
           color: $color-white;
@@ -432,12 +497,15 @@ ul.flixhover{
           bottom: 0;
           font-size: 19px;
         }
+        &:hover{
+          @include transform(translateY(-50px) scale(.92));
+        }
       }
     }
-    .owl-dots{
+    .owl-dots {
       display: block;
       margin-left: auto;
-      .owl-dot{
+      .owl-dot {
         background: $color-white;
         @include border-radius(100px);
         @include box-shadow(1px 3px 11px -2px $color-1);
@@ -448,46 +516,50 @@ ul.flixhover{
         margin-bottom: 20px;
         outline: 0;
         margin-right: 15px;
-        &.active{
-          background:$color-1 ;
+        &.active {
+          background: $color-1;
           border-color: $color-white;
         }
-        span{
+        span {
           display: none;
         }
       }
     }
   }
 }
+
 /* === Restaurant Son === */
 
 /* === Oda Çeşitleri === */
-#main-oda-cesitleri{
+#main-oda-cesitleri {
   padding-top: 30px;
   padding-bottom: 80px;
 }
+
 /* === Oda Çeşitleri SON === */
 
-#main-logolar{
+#main-logolar {
   padding-bottom: 30px;
-  .logo-wrapper{
-    background: linear-gradient(to bottom,$color-white 69%,rgba($color-1, 0.29) 170%);
+  .logo-wrapper {
+    background: linear-gradient(to bottom, $color-white 69%, rgba($color-1, 0.29) 170%);
     @include box-shadow(0px 5px 24px -8px $color-light-black);
     @include border-radius(4px);
     margin-bottom: 45px;
 
-    img{
+    img {
       width: 100%;
     }
   }
 }
 
-@media (min-width: 576px) { }
+@media (min-width: 576px) {
+}
 
-@media (min-width: 768px) { }
+@media (min-width: 768px) {
+}
 
 @media (min-width: 992px) {
-  .mfp-arrow-left{
+  .mfp-arrow-left {
     left: -70px;
   }
   .mfp-arrow-right {

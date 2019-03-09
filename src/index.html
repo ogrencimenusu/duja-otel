@@ -9,9 +9,6 @@
 
     <link rel="icon" href="assets/images/favicon.ico">
 
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="assets/animate.css-3.7/animate.min.css">
-
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="assets/fontawesome-5.6.3/css/all.min.css">
 
@@ -22,8 +19,8 @@
     <link rel="stylesheet" type="text/css" href="assets/owlcarousel-2.3.4/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="assets/owlcarousel-2.3.4/owl.theme.default.min.css">
 
-    <!-- Magnificpopup CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/magnificpopup-1.1/magnific-popup.min.css">
+    <!-- Tempusdominus Date picker CSS -->
+    <link href="assets/tempusdominus-5.1.2/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/my/app.min.css">
@@ -134,9 +131,54 @@
             </div>
         </div>
         <div class="rezervasyon">
-            <div class="container wrapper">
-                <div class="row">
-                    saas nbr
+            <div class="container">
+                <div class="rez-wrapper">
+                    <form class="row">
+                        <h3 class="rez-title">Rezervasyon</h3>
+                        <div class="col-md-2">
+                            <div class="form-group" id="datetimepicker7" data-target-input="nearest">
+                                <label >Giriş</label>
+                                <input type="text" class="form-control datetimepicker-input" data-toggle="datetimepicker" data-target="#datetimepicker7"/>
+                            </div>
+                        </div>
+                        <div class='col-md-2'>
+                            <div class="form-group" id="datetimepicker8" data-target-input="nearest">
+                                <label>Çıkış</label>
+                                <input type="text" class="form-control datetimepicker-input" data-toggle="datetimepicker" data-target="#datetimepicker8"/>
+                            </div>
+                        </div>
+                        <div class='col-md-3'>
+                            <div class="form-group">
+                                <label for="">Oda</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="1">Club Odaları</option>
+                                    <option value="1">Hotel Odaları</option>
+                                    <option value="1">Village Odaları</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='col-md-2'>
+                            <div class="form-group kisi-sayisi">
+                                <label for="">Yetişkin</label>
+                                <input type="text" class="form-control" value="3">
+                                <i class="far fa-user"></i>
+                            </div>
+                        </div>
+                        <div class='col-md-2'>
+                            <div class="form-group kisi-sayisi">
+                                <label for="">Çocuk</label>
+                                <input type="text" class="form-control" value="3">
+                                <i class="far fa-user"></i>
+                            </div>
+                        </div>
+                        <div class='col-md-1'>
+                            <div class="form-group">
+                                <button type="submit" class="btn">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -500,24 +542,46 @@
             </div>
         </div>
     </section>
+
     <!-- Optional JavaScript -->
     <script src="assets/jquery-3.3.1/jquery.min.js"></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Tempusdominus Date picker JS -->
+
+    <script src="assets/tempusdominus-5.1.2/moment-with-locales.min.js"></script>
+    <script src="assets/tempusdominus-5.1.2/tempusdominus-bootstrap-4.min.js"></script>
+
+
+    <!-- Popper.js, Bootstrap JS -->
     <script src="assets/popper-1.14.6/popper.min.js"></script>
     <script src="assets/bootstrap-4.2.1/js/bootstrap.min.js"></script>
 
     <!-- Owlcarousel JS -->
     <script src="assets/owlcarousel-2.3.4/owl.carousel.min.js"></script>
 
-    <!-- Magnificpopup JS -->
-    <script src="assets/magnificpopup-1.1/magnific-popup.min.js"></script>
-
     <!-- Main JS -->
     <script src="assets/my/main.js"></script>
 
     <script>
         $(document).ready(() => {
+
+            $('#datetimepicker8').datetimepicker({
+                useCurrent: false,
+                locale: 'tr',
+                format: 'L',
+                defaultDate:Date()
+            });
+            $('#datetimepicker7').datetimepicker({
+                locale: 'tr',
+                format: 'L',
+                defaultDate:Date()
+            });
+            $("#datetimepicker7").on("change.datetimepicker", function (e) {
+                $('#datetimepicker8').datetimepicker('minDate', e.date);
+            });
+            $("#datetimepicker8").on("change.datetimepicker", function (e) {
+                $('#datetimepicker7').datetimepicker('maxDate', e.date);
+            });
 
             $('#slider .owl-carousel').owlCarousel({
                 loop:true,
@@ -539,6 +603,7 @@
                 dots:true,
                 items:5
             });
+
         });
     </script>
 </body>
