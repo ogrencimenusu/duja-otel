@@ -548,7 +548,7 @@ ul.flixhover {
 }
 /* === Logolar  SON === */
 
-@media (max-width:767px) {
+@media (max-width:574px) {
   #header{
     position: relative;
     background: linear-gradient(to bottom,rgba(255,255,255,1) 100%,rgba(255,255,255,0) 100%);
@@ -705,6 +705,159 @@ ul.flixhover {
           span:nth-child(2) {
             font-size: 20px;
           }
+        }
+      }
+    }
+  }
+}
+@media (max-width:767px) and (min-width:575px) {
+  #header{
+    position: relative;
+    background: linear-gradient(to bottom,rgba(255,255,255,1) 100%,rgba(255,255,255,0) 100%);
+    padding-top: 0;
+    padding-bottom: 0;
+    .navbar-brand{
+      width: 100%;
+      margin-right: 0;
+      img{
+        margin: auto;
+        display: block;
+        width: 150px;
+        margin-bottom: 10px ;
+      }
+    }
+    .dil-wrapper{
+      padding-left: 0;
+      margin: auto;
+      text-align: center;
+    }
+    .tr-wrapper{
+      .sosyal{
+        margin-left: 0;
+      }
+    }
+    .navbar{
+      padding-left: 0;
+      .navbar-toggler{
+        outline: 0;
+        margin-top: -200px;
+        @include transform(scale(.7))
+      }
+      .navbar-collapse{
+        .navbar-nav{
+          .nav-item{
+            float: left;
+            .nav-link{
+              border-right: 0;
+              padding: 0 8px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #slider{
+    @include box-shadow(0px 11px 71px -8px $color-2);
+    .owl-carousel {
+      .item {
+        .row{
+          align-items: normal !important;
+        }
+        .caption {
+          width: 100%;
+          padding: 30px;
+          padding-top: 50px;
+          color: $color-white;
+          @include text-shadow(3px 1px 10px $color-2);
+          h1 {
+            font-size: 40px;
+          }
+          h3 {
+            font-size: 30px;
+          }
+        }
+      }
+      img {
+        height: 100vh;
+        width: auto;
+      }
+    }
+    .dots-wrap{
+      top: 20%;
+    }
+    .rezervasyon{
+      .rez-wrapper{
+        .form-group{
+          margin-bottom: 15px;
+          label{
+            width: 72px;
+          }
+          &.kisi-sayisi{
+            margin-right: 10px;
+            i{
+              margin-left: -24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #main-restaurant{
+    .main-title {
+      margin-bottom: -30px;
+      margin-top: 20px;
+    }
+  }
+  #main-otel-hakkinda{
+    .hakkimizda-wrapper{
+      .bg-white{
+        margin: 0;
+        .yazi-wrapper{
+          padding: 40px 20px;
+          flex: auto;
+          width: 100%;
+          max-width: 100%;
+          .logo{
+            margin: auto;
+          }
+        }
+        .img-wrapper{
+          flex: auto;
+          width: 100%;
+          max-width: 100%;
+          padding: 0;
+          img{
+            margin: 0px;
+            @include transform(scale(1))
+          }
+        }
+      }
+      .buton{
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+  .mini-slider{
+    padding: 0;
+    overflow: hidden;
+    &:before {
+      height: 30px;
+      top: calc(50% - 15px);
+    }
+    .item{
+      @include transform(scale(.8) !important)
+    }
+    .owl-nav{
+      button{
+        top: 42% !important;
+        width: 20px !important;
+        &.owl-prev{
+          left: -8px !important;
+        }
+        &.owl-next{
+          right: -8px !important;
         }
       }
     }
